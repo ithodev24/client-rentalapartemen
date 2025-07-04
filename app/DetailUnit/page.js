@@ -1,147 +1,142 @@
-import Footer from '../components/Footer';
+"use client";
 
-export default function DetailUnit() {
+import { use } from "react";
+import { Units } from "../../../data/units";
+import Footer from "../../components/Footer";
+import BackButton from "../../components/BackButton";
+
+export default function DetailUnit({ params }) {
+  const { id } = use(params);
+  const unit = Units.find((u) => u.id === parseInt(id));
+
+  if (!unit) return <div className="p-10 text-center">Unit tidak ditemukan</div>;
+
   return (
-    <div className="w-full font-sans">
+    <div className="w-full font-sans bg-white">
       {/* Header */}
-      <div className="relative w-full h-30 bg-cover bg-center" style={{ backgroundImage: 'url(/images/RD-topdetailunit.png)' }}>
-        <button className="absolute top-10 left-10 bg-white text-black px-4 py-2 rounded-full shadow font-medium">
-          ←
-        </button>
+      <div
+        className="relative w-full h-28 bg-cover bg-center"
+        style={{ backgroundImage: 'url(/images/RD-topdetailunit.png)' }}
+      >
+        <BackButton />
       </div>
 
-      {/* Content */}
-      <div className="grid md:grid-cols-2 gap-6 px-10 py-10 bg-white">
-        {/* Image */}
-        <div className="flex justify-center items-center">
-          <img src="/images/RD-yamahagear.png" alt="Yamaha Gear 125" className="w-full max-w-md object-contain" />
+      {/* Section Atas */}
+      <div className="flex flex-col md:flex-row px-6 sm:px-10 py-10 gap-10 items-start">
+        {/* Gambar & Galeri */}
+        <div className="flex flex-row gap-4 w-full md:w-1/2">
+          <div className="flex flex-col gap-2 w-20">
+          {unit.gallery.map((img, idx) => (
+            <img
+              key={idx}
+              src={img}
+              alt={`thumbnail-${idx}`}
+              className="h-14 w-14 object-cover rounded-lg border"
+            />
+          ))}
+        </div>
+          <img
+            src={unit.image}
+            alt={unit.name}
+            className="flex-1 h-[280px] sm:h-[320px] object-cover rounded-xl"
+          />
         </div>
 
-       {/* Text Detail */}
-      <div className="flex flex-col justify-center gap-4">
-        <h2 className="text-2xl font-bold">Yamaha Gear 125</h2>
-        <p className="text-sm text-gray-700 leading-relaxed">
-          Dengan mesin 125cc berteknologi Blue Core, Yamaha Gear 125 menawarkan performa yang responsif sekaligus irit bahan bakar. 
-          Dilengkapi pula dengan fitur Smart Motor Generator (SMG) yang membuat suara starter lebih halus saat dinyalakan.
-        </p>
+        {/* Informasi Unit */}
+        <div className="flex flex-col gap-4 w-full md:w-1/2">
+          <h2 className="text-2xl font-bold">{unit.name}</h2>
 
-        <hr className="my-2 border-black" />
-
-        <div className="flex flex-wrap gap-2 text-sm">
-          <span className="border border-yellow-500 px-10 py-1 rounded-full text-gray-800">120 KG</span>
-          <span className="border border-yellow-500 px-10 py-1 rounded-full text-gray-800">Bandung</span>
-          <span className="border border-yellow-500 px-10 py-1 rounded-full text-gray-800">Mahasiswa</span>
-        </div>
-
-       {/* Harga */}
-      <div className="mt-4 flex items-center gap-20">
-        {/* Label */}
-        <span className="font-semibold text-black text-2xl w-38">Harga Sewa</span>
-
-        {/* Harga dan keterangannya */}
-        <div className="flex items-end gap-6 text-red-600 font-bold text-xl">
-          {/* Weekday */}
-          <div className="flex flex-col leading-none">
-            <span>Rp 85.000</span>
-            <span className="text-xs font-normal text-red">Weekday</span>
+          <div className="text-sm">
+            <p className="font-semibold mb-1">Fasilitas</p>
+            <div className="flex gap-10">
+              <div>
+                <p className="font-semibold">Indoor:</p>
+                <ul className="list-disc ml-5">
+                  {unit.facilities.indoor.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold">Outdoor:</p>
+                <ul className="list-disc ml-5">
+                  {unit.facilities.outdoor.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
 
-          {/* Separator garis */}
-          <span className="text-red-600 text-xl font-bold">|</span>
+          {/* Tag lokasi & kapasitas */}
+          <div className="flex gap-2 flex-wrap text-sm">
+            <span className="bg-gray-100 px-4 py-1 rounded-full">{unit.daerah}</span>
+            <span className="bg-gray-100 px-4 py-1 rounded-full">{unit.maxCapacity}</span>
+            <span className="bg-gray-100 px-4 py-1 rounded-full">{unit.status}</span>
+          </div>
+
+          {/* Tombol Sewa */}
+          <div className="pt-2">
+            <button className="bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-2 w-full rounded-full shadow">
+              Sewa Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Daftar Harga */}
+      <div className="bg-yellow-400 px-6 sm:px-10 py-12 text-black">
+        <div className="relative mb-10">
+          <h3 className="text-xl font-bold text-center bg-white inline-block px-6 py-2 rounded-full mx-auto">
+            Daftar Harga
+          </h3>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Weekday */}
+          <div className="bg-white rounded-xl shadow p-6">
+            <h4 className="text-center font-semibold text-lg mb-4">Weekday</h4>
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b text-gray-700">
+                  <th className="py-2 text-left">Lama Penyewaan</th>
+                  <th className="py-2 text-right">Harga</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.entries(unit.prices.weekday).map(([durasi, harga], idx) => (
+                  <tr key={idx}>
+                    <td className="py-1">{durasi}</td>
+                    <td className="py-1 text-right">{harga}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           {/* Weekend */}
-          <div className="flex flex-col leading-none">
-            <span>Rp 110.000</span>
-            <span className="text-xs font-normal text-red">Weekend</span>
-          </div>
-        </div>
-      </div>
-
-        {/* Fasilitas */}
-      <div className="mt-4 flex items-start gap-20">
-        {/* Label */}
-        <span className="font-semibold text-black text-2xl w-38">Fasilitas</span>
-
-        {/* Isi fasilitas */}
-        <div className="grid grid-cols-2 text-sm gap-x-6 gap-y-1 text-red-700 font-semibold">
-          <div className="flex items-center gap-2">
-            <span>•</span>
-            <p>2 Helm</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <span>•</span>
-            <p>Penyangga HP</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <span>•</span>
-            <p>2 Jas Hujan</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <span>•</span>
-            <p>Gembok Cakram</p>
-          </div>
-        </div>
-      </div>
-
-
-        {/* Button */}
-        <div className="pt-4">
-          <button className="w-full bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-2 rounded-full">
-            Sewa Sekarang
-          </button>
-        </div>
-      </div>
-    </div>
-
-{/* Bawah: Info dan Tabel */}
-      <div className="bg-red-700 text-white px-10 py-8 grid md:grid-cols-2 gap-10 text-base">
-        {/* Text */}
-        <div className="space-y-4 leading-relaxed">
-          <p>
-           Unit motor yang kami sediakan hadir dengan tampilan elegan, menggunakan bahan bakar bensin, dan dalam kondisi prima. Setiap motor dirawat dengan baik, memiliki mesin yang halus, serta siap digunakan kapan saja.
-          </p>
-          <p>
-            Seluruh kendaraan memiliki pajak aktif dan dilengkapi surat-surat resmi, sehingga Anda tidak perlu khawatir mengenai legalitas. Perawatan dan servis rutin juga selalu dilakukan agar performa tetap optimal dan aman saat dikendarai.
-          </p>
-          <p>
-            Dengan desain yang simpel serta hemat bahan bakar, unit motor kami sangat cocok digunakan untuk berbagai keperluan harian maupun aktivitas mobilitas lainnya.
-          </p>
-        </div>
-
-        {/* Tabel Kanan */}
-        <div className="flex justify-center items-start">
-          <div className="bg-white text-black rounded-md px-6 py-4 text-sm w-full max-w-md shadow-md">
-            <table className="w-full table-fixed">
+          <div className="bg-white rounded-xl shadow p-6">
+            <h4 className="text-center font-semibold text-lg mb-4">Weekend</h4>
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b text-gray-700">
+                  <th className="py-2 text-left">Lama Penyewaan</th>
+                  <th className="py-2 text-right">Harga</th>
+                </tr>
+              </thead>
               <tbody>
-                <tr className="bg-white">
-                  <td className="py-3 pr-4 font-semibold w-1/2">Jenis Transmisi</td>
-                  <td className="py-3 text-right w-1/2">Metic</td>
-                </tr>
-                <tr className="bg-gray-100">
-                  <td className="py-3 pr-4 font-semibold">Kapasitas Mesin</td>
-                  <td className="py-3 text-right">125cc</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="py-3 pr-4 font-semibold">Pajak</td>
-                  <td className="py-3 text-right">Aktif</td>
-                </tr>
-                <tr className="bg-gray-100">
-                  <td className="py-3 pr-4 font-semibold">Warna</td>
-                  <td className="py-3 text-right">Hitam</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="py-3 pr-4 font-semibold">Bahan Bakar</td>
-                  <td className="py-3 text-right">Bensin</td>
-                </tr>
-                <tr className="bg-gray-100">
-                  <td className="py-3 pr-4 font-semibold">Kapasitas Maksimal</td>
-                  <td className="py-3 text-right">200 Kg</td>
-                </tr>
+                {Object.entries(unit.prices.weekend).map(([durasi, harga], idx) => (
+                  <tr key={idx}>
+                    <td className="py-1">{durasi}</td>
+                    <td className="py-1 text-right">{harga}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

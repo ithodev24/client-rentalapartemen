@@ -10,33 +10,33 @@ export default function Navbar() {
   const pathname = usePathname()
 
   const navItems = [
-    { label: 'Beranda', href: '/RentalDay/' },
+    { label: 'Beranda', href: '/' },
     { label: 'Daftar Unit', href: '/DaftarUnit' },
     { label: 'Testimoni', href: '/Testimoni' },
     { label: 'Kontak', href: '/Kontak' },
   ]
 
   return (
-    <div className="bg-yellow-300 px-4 md:px-10 py-3 shadow-md">
+    <div className="bg-white px-4 md:px-10 py-3 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src="/images/logo_rentalday.png" alt="Logo" className="w-8 h-8" />
-          <span className="text-black font-semibold text-lg">Rentalday</span>
+          <img src="/images/logosewa.png" alt="Logo" className="w-8 h-8" />
+          <span className="text-[#C79C20] font-semibold text-lg">Perfect Room</span>
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex gap-6 items-center">
+        <nav className="hidden md:flex gap-4 items-center relative">
           {navItems.map((item) => {
             const isActive = pathname.toLowerCase() === item.href.toLowerCase()
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`px-3 py-1 rounded-md text-sm font-semibold ${
+                className={`px-4 py-2 text-sm font-semibold transition-all ${
                   isActive
-                    ? 'bg-white text-red-600 shadow'
-                    : 'text-black hover:text-red-600'
+                    ? 'bg-[#EECE21] text-white rounded-b-xl shadow-md -mt-4'
+                    : 'text-black hover:text-black'
                 }`}
               >
                 {item.label}
@@ -54,7 +54,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden mt-2 bg-yellow-200 px-4 py-2 rounded-md shadow-md">
           {navItems.map((item) => {

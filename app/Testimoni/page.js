@@ -5,7 +5,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-
 const testimonials = [
   {
     name: 'Riyadatunnisa',
@@ -50,12 +49,16 @@ export default function Testimonials() {
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="flex flex-col md:flex-row items-start justify-center gap-6">
+        {/* Judul HP */}
+        <h2 className="text-2xl md:hidden font-bold text-center mb-6">
+          Kata Mereka Tentang Rentalday
+        </h2>
+
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10">
           
           {/* Box Besar */}
-          <div className="relative w-96">
-            {/* <div className="bg-white text-black p-4 rounded-2xl shadow-lg flex flex-col"> */}
-            <div className="bg-white text-black p-4 rounded-2xl shadow-lg flex flex-col h-[380px]">
+          <div className="relative w-[90%] max-w-sm md:w-full md:max-w-md">
+            <div className="bg-white text-black p-4 rounded-2xl shadow-lg flex flex-col h-[400px]">
               <div className="relative rounded-xl overflow-hidden aspect-video">
                 <video
                   src={testimonials[currentIndex].video}
@@ -72,35 +75,36 @@ export default function Testimonials() {
                 </div>
               </div>
               <div className="flex items-start justify-between mt-2 gap-4">
-              <p className="text-sm text-gray-700 flex-1">{testimonials[currentIndex].text}</p>
-              <img src="/images/logo_rentalday.png" alt="Logo" className="2-14 h-14 object-contain" />
-            </div>
+                <p className="text-sm text-gray-700 flex-1">{testimonials[currentIndex].text}</p>
+                <img src="/images/logo_rentalday.png" alt="Logo" className="h-14 object-contain" />
+              </div>
             </div>
 
-            {/* Tombol Navigasi */}
+            {/* Tombol Navigasi Desktop */}
             <button 
               onClick={handlePrev} 
-              className="absolute -left-12 top-1/2 -translate-y-1/2 bg-yellow-400 text-black p-2 rounded-full hover:bg-yellow-500"
+              className="hidden md:block absolute -left-12 top-1/2 -translate-y-1/2 bg-yellow-400 text-black p-2 rounded-full hover:bg-yellow-500"
             >
               <ChevronLeft size={20} />
             </button>
             <button 
               onClick={handleNext} 
-              className="absolute -right-12 top-1/2 -translate-y-1/2 bg-yellow-400 text-black p-2 rounded-full hover:bg-yellow-500"
+              className="hidden md:block absolute -right-12 top-1/2 -translate-y-1/2 bg-yellow-400 text-black p-2 rounded-full hover:bg-yellow-500"
             >
               <ChevronRight size={20} />
             </button>
           </div>
 
-          {/* Judul & Dua Box Kecil */}
-          <div className="flex flex-col items-start">
-            <h2 className="text-2xl md:text-4xl font-bold text-white ml-2 md:ml-8">
+          {/* Judul & Box Kecil */}
+          <div className="flex flex-col items-start w-full md:w-auto">
+            {/* Judul Desktop */}
+            <h2 className="hidden md:block text-4xl font-bold text-white ml-2 md:ml-8 mb-4">
               Kata Mereka Tentang Rentalday
             </h2>
 
-            <div className="mt-6 flex flex-row gap-6 md:ml-8 flex-wrap">
+            <div className="hidden md:flex mt-2 flex-col md:flex-row gap-8 md:ml-8">
               {[testimonials[(currentIndex - 1 + testimonials.length) % testimonials.length], testimonials[(currentIndex + 1) % testimonials.length]].map((item, index) => (
-                <div key={index} className="w-80 bg-white text-black p-4 rounded-2xl shadow-lg flex flex-col">
+                <div key={index} className="w-[90%] max-w-sm md:w-80 bg-white text-black p-4 rounded-2xl shadow-lg flex flex-col">
                   <div className="relative rounded-xl overflow-hidden aspect-video">
                     <video
                       src={item.video}
@@ -117,11 +121,27 @@ export default function Testimonials() {
                     </div>
                   </div>
                   <div className="flex items-start justify-between mt-2 gap-4">
-                  <p className="text-sm text-gray-700 flex-1">{item.text}</p>
-                  <img src="/images/logo_rentalday.png" alt="Logo" className="2-14 h-14 top-10 object-contain" />
-                </div>
+                    <p className="text-sm text-gray-700 flex-1">{item.text}</p>
+                    <img src="/images/logo_rentalday.png" alt="Logo" className="h-14 object-contain" />
+                  </div>
                 </div>
               ))}
+            </div>
+
+            {/* Tombol Navigasi HP */}
+            <div className="flex justify-center gap-4 mt-6 md:hidden w-full">
+              <button
+                onClick={handlePrev}
+                className="bg-yellow-400 text-black p-2 rounded-full hover:bg-yellow-500"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                onClick={handleNext}
+                className="bg-yellow-400 text-black p-2 rounded-full hover:bg-yellow-500"
+              >
+                <ChevronRight size={20} />
+              </button>
             </div>
           </div>
         </div>
