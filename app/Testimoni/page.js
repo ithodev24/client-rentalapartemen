@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import AnimatePage from '../components/AnimatePage';
 
 const testimonials = [
   {
@@ -47,6 +48,7 @@ export default function Testimonials() {
       }}
     >
       <Navbar />
+      <AnimatePage>
 
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Judul HP */}
@@ -146,7 +148,7 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
-
+      </AnimatePage>
       <Footer />
     </div>
   );

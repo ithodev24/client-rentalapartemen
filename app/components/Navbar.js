@@ -11,6 +11,7 @@ export default function Navbar() {
 
   const navItems = [
     { label: 'Beranda', href: '/' },
+    { label: 'Artikel', href: '/artikel' },
     { label: 'Daftar Unit', href: '/DaftarUnit' },
     { label: 'Testimoni', href: '/Testimoni' },
     { label: 'Kontak', href: '/Kontak' },
@@ -35,7 +36,7 @@ export default function Navbar() {
                 href={item.href}
                 className={`px-4 py-2 text-sm font-semibold transition-all ${
                   isActive
-                    ? 'bg-[#EECE21] text-white rounded-b-xl shadow-md -mt-4'
+                    ? 'bg-[#C08931] text-white rounded-b-xl shadow-md -mt-4'
                     : 'text-black hover:text-black'
                 }`}
               >
@@ -56,7 +57,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden mt-2 bg-yellow-200 px-4 py-2 rounded-md shadow-md">
+        <div className="md:hidden mt-2 bg-[#C08931] px-4 py-2 rounded-md shadow-md">
           {navItems.map((item) => {
             const isActive = pathname.toLowerCase() === item.href.toLowerCase()
             return (

@@ -31,57 +31,15 @@ const SosialMediaDropdown = () => {
 <div className="px-4 pb-4 pt-2 text-black space-y-4 text-sm">
   {/* Bandung */}
   <div>
-    <div className="font-semibold">Bandung</div>
+    <div className="font-semibold">Bekasi</div>
     <a
-      href="https://wa.me/6288010458655"
+      href="https://wa.me/6281280007220"
       target="_blank"
       className="inline-block bg-green-600 text-white px-4 py-2 rounded-full mt-1 text-sm"
     >
-      (+62) 088 0104 58655
+      (+62) 812-8000-7220
     </a>
-  </div>
-  <hr className="border-t border-green-400" />
-
-  {/* Bali */}
-  <div>
-    <div className="font-semibold">Bali</div>
-    <a
-      href="https://wa.me/6288010458655"
-      target="_blank"
-      className="inline-block bg-green-600 text-white px-4 py-2 rounded-full mt-1 text-sm"
-    >
-      (+62) 088 0104 58655
-    </a>
-  </div>
-  <hr className="border-t border-green-400" />
-
-  {/* Purwokerto */}
-  <div>
-    <div className="font-semibold">Purwokerto</div>
-    <a
-      href="https://wa.me/6288010458655"
-      target="_blank"
-      className="inline-block bg-green-600 text-white px-4 py-2 rounded-full mt-1 text-sm"
-    >
-      (+62) 088 0104 58655
-    </a>
-  </div>
-  <hr className="border-t border-green-400" />
-
-  {/* Malang */}
-  <div>
-    <div className="font-semibold">Malang</div>
-    <a
-      href="https://wa.me/6288010458655"
-      target="_blank"
-      className="inline-block bg-green-600 text-white px-4 py-2 rounded-full mt-1 text-sm"
-    >
-      (+62) 088 0104 58655
-    </a>
-  </div>
-</div>
-</div>
-        </div>
+    </div></div></div></div>
       </div>
 
       {/* TikTok */}
@@ -101,10 +59,10 @@ const SosialMediaDropdown = () => {
         <div className={`transition-all duration-300 ease-in-out overflow-hidden ${activeDropdown === "tiktok" ? "max-h-[500px]" : "max-h-0"}`}>
           <div className="px-4 pb-4 pt-2 text-black space-y-4 text-sm">
             {[
-              { area: "Bandung", users: [{ handle: "@rentaldaybandung", link: "https://www.tiktok.com/@rentaldaybandung" }, { handle: "@rentalday.student", link: "https://www.tiktok.com/@rentalday.student" }] },
-              { area: "Bali", users: [{ handle: "@rentalday_", link: "https://www.tiktok.com/@rentalday_" }] },
-              { area: "Purwokerto", users: [{ handle: "@rentalday.pwt", link: "https://www.tiktok.com/@rentalday.pwt" }] },
-              { area: "Malang", users: [{ handle: "@rentaldaymlg", link: "https://www.tiktok.com/@rentaldaymlg" }] },
+              // { area: "Bekasi", users: [{ handle: "@rentaldaybandung", link: "https://www.tiktok.com/@rentaldaybandung" }, { handle: "@rentalday.student", link: "https://www.tiktok.com/@rentalday.student" }] },
+              { area: "Bekasi", users: [{ handle: "@perfectrooms.id", link: "https://www.tiktok.com/@perfectrooms.id?_t=ZS-8yHjnfp0CCg&_r=1" }] },
+              // { area: "Purwokerto", users: [{ handle: "@rentalday.pwt", link: "https://www.tiktok.com/@rentalday.pwt" }] },
+              // { area: "Malang", users: [{ handle: "@rentaldaymlg", link: "https://www.tiktok.com/@rentaldaymlg" }] },
             ].map((region, index) => (
               <div key={index}>
                 {index > 0 && <hr className="border-t border-gray-300 my-2" />}
@@ -144,14 +102,14 @@ const SosialMediaDropdown = () => {
         <div className={`transition-all duration-300 ease-in-out overflow-hidden ${activeDropdown === "instagram" ? "max-h-[500px]" : "max-h-0"}`}>
           <div className="px-4 pb-4 pt-2 text-black space-y-4 text-sm">
             {[
-            { area: "Bandung", users: [
-              { handle: "@rentalday.student", link: "https://instagram.com/rentalday.student" },
-              { handle: "@rentalday.molis", link: "https://instagram.com/rentalday.molis" },
-              { handle: "@bandungrider.id", link: "https://instagram.com/bandungrider.id" }
-            ]},
-            { area: "Bali", users: [{ handle: "@balirider.id", link: "https://instagram.com/balirider.id" }] },
-            { area: "Purwokerto", users: [{ handle: "@rentalday.pwt", link: "https://instagram.com/rentalday.pwt" }] },
-            { area: "Malang", users: [{ handle: "@rentaldaymlg", link: "https://instagram.com/rentaldaymlg" }] },
+            // { area: "Bandung", users: [
+            //   { handle: "@rentalday.student", link: "https://instagram.com/rentalday.student" },
+            //   { handle: "@rentalday.molis", link: "https://instagram.com/rentalday.molis" },
+            //   { handle: "@bandungrider.id", link: "https://instagram.com/bandungrider.id" }
+            // ]},
+            // { area: "Bali", users: [{ handle: "@balirider.id", link: "https://instagram.com/balirider.id" }] },
+            // { area: "Purwokerto", users: [{ handle: "@rentalday.pwt", link: "https://instagram.com/rentalday.pwt" }] },
+            { area: "Bekasi", users: [{ handle: "@perfectrooms.id", link: "https://www.instagram.com/perfectrooms.id?igsh=MjlrZHVneTVkNnR5" }] },
           ].map((region, index) => (
             <div key={index}>
               {index > 0 && <hr className="border-t border-gray-300 my-2" />}
