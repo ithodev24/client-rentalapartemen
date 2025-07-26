@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -24,6 +24,8 @@ const SosialMediaDropdown = () => {
               src="/images/logos_whatsapp-icon.png"
               className="h-5"
               alt="Logo WhatsApp"
+              width={20}
+              height={20}
             />
             WhatsApp
           </div>
@@ -69,6 +71,8 @@ const SosialMediaDropdown = () => {
               src="/images/logos_tiktok-icon.png"
               className="h-5"
               alt="Logo TikTok"
+              width={20}
+              height={20}
             />
             TikTok
           </div>
@@ -132,6 +136,8 @@ const SosialMediaDropdown = () => {
               src="/images/logos_instagram-icon.png"
               className="h-5"
               alt="Logo Instagram"
+              width={20}
+              height={20}
             />
             Instagram
           </div>

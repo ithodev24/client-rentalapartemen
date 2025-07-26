@@ -6,7 +6,7 @@ const CardUnit = ({ name, description, image, role = "Mahasiswa" }) => {
     <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 w-full flex flex-col h-full">
       {/* Gambar */}
       <div className="relative w-full h-40 sm:h-44 bg-white rounded-lg overflow-hidden">
-        <Image src={image} alt={name} className="w-full h-full object-cover" />
+        <Image src={image} alt={name} className="w-full h-full object-cover" width={500} height={500} />
       </div>
 
       {/* Konten */}

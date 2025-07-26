@@ -10,6 +10,8 @@ export default function Footer() {
         src="/images/footerkanan.png"
         alt="Flower Top Left"
         className="absolute top-[-10px] left-0 w-140 z-0"
+        width={50}
+        height={50}
       />
 
       {/* Ornamen bunga kanan bawah */}
@@ -17,6 +19,8 @@ export default function Footer() {
         src="/images/footerkiri.png"
         alt="Flower Bottom Right"
         className="absolute bottom-[-10px] right-0 w-100 mb-10 z-0"
+        width={50}
+        height={50}
       />
 
       {/* Konten utama */}
@@ -36,6 +40,8 @@ export default function Footer() {
                 src="/images/icon_tt.png"
                 alt="Instagram"
                 className="w-8 h-8"
+                width={50}
+                height={50}
               />
             </Link>
 
@@ -49,16 +55,42 @@ export default function Footer() {
                 src="/images/icon_wa.png"
                 alt="WhatsApp"
                 className="w-7 h-7"
+                width={50}
+                height={50}
               />
             </Link>
           </div>
 
           {/* Logo Bank */}
           <div className="-ml-10 md:-ml-20 self-start bg-[#C08931] rounded-full px-6 py-2 shadow-md flex items-center space-x-6">
-            <Image src="/images/pm_bni.png" alt="BNI" className="h-8" />
-            <Image src="/images/pm_bca.png" alt="BCA" className="h-8" />
-            <Image src="/images/pm_mandiri.png" alt="Mandiri" className="h-8" />
-            <Image src="/images/pm_qris.png" alt="QRIS" className="h-8" />
+            <Image
+              src="/images/pm_bni.png"
+              alt="BNI"
+              className="h-8"
+              width={50}
+              height={50}
+            />
+            <Image
+              src="/images/pm_bca.png"
+              alt="BCA"
+              className="h-8"
+              width={50}
+              height={50}
+            />
+            <Image
+              src="/images/pm_mandiri.png"
+              alt="Mandiri"
+              className="h-8"
+              width={50}
+              height={50}
+            />
+            <Image
+              src="/images/pm_qris.png"
+              alt="QRIS"
+              className="h-8"
+              width={50}
+              height={50}
+            />
           </div>
         </div>
 

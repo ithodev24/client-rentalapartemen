@@ -57,7 +57,7 @@ export default function Testimonials() {
         <div className="max-w-7xl mx-auto px-4 py-16">
           {/* Judul HP */}
           <h2 className="text-2xl md:hidden font-bold text-center mb-6">
-            Kata Mereka Tentang Rentalday
+            Kata Mereka Tentang Perfect Room
           </h2>
 
           <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10">
@@ -86,9 +86,11 @@ export default function Testimonials() {
                     {testimonials[currentIndex].text}
                   </p>
                   <Image
-                    src="/images/logo_rentalday.png"
+                    src="/images/logosewa.png"
                     alt="Logo"
                     className="h-14 object-contain"
+                    width={50}
+                    height={50}
                   />
                 </div>
               </div>
@@ -112,7 +114,7 @@ export default function Testimonials() {
             <div className="flex flex-col items-start w-full md:w-auto">
               {/* Judul Desktop */}
               <h2 className="hidden md:block text-4xl font-bold text-white ml-2 md:ml-8 mb-4">
-                Kata Mereka Tentang Rentalday
+                Kata Mereka Tentang Perfect Room
               </h2>
 
               <div className="hidden md:flex mt-2 flex-col md:flex-row gap-8 md:ml-8">
@@ -147,9 +149,11 @@ export default function Testimonials() {
                         {item.text}
                       </p>
                       <Image
-                        src="/images/logo_rentalday.png"
+                        src="/images/logosewa.png"
                         alt="Logo"
                         className="h-14 object-contain"
+                        width={50}
+                        height={50}
                       />
                     </div>
                   </div>

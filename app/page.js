@@ -27,7 +27,7 @@ export default function HomePage() {
 
   return (
     <div className="bg-gray-100">
-      <Navbar />
+      <Navbar />  
 
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center text-white overflow-hidden">
@@ -35,6 +35,8 @@ export default function HomePage() {
           src="/images/sewaapartemen_bg.png"
           alt="Background"
           className="absolute inset-0 w-full h-full object-cover"
+          width={500}
+          height={500}
         />
         <div className="absolute inset-0 bg-gradient-to-l from-black via-[#C08931cc]/40 to-transparent" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-10 py-10 flex justify-end">
@@ -72,7 +74,7 @@ export default function HomePage() {
               ["icon_lokasi.png", "Lokasi Strategis"],
             ].map(([icon, label], i) => (
               <div key={i} className="flex items-center justify-center gap-2">
-                <Image src={`/images/${icon}`} className="w-10 h-10" alt="icon" />
+                <Image src={`/images/${icon}`} className="w-10 h-10" alt="icon" width={100} height={100} />
                 <p className="text-sm md:text-base font-medium">{label}</p>
               </div>
             ))}
@@ -91,6 +93,8 @@ export default function HomePage() {
                   src={`http://localhost:3333/${articles[0].thumbnail}`}
                   alt={articles[0].title}
                   className="w-full h-full object-cover"
+                  width={500}
+                  height={500}
                 />
                 <Link
                   href={`/artikel/${articles[0].slug}`}
@@ -125,6 +129,8 @@ export default function HomePage() {
                         src={`http://localhost:3333/${item.thumbnail}`}
                         alt={item.title}
                         className="w-full h-full object-cover"
+                        width={500}
+                        height={500}
                       />
                     </div>
                     <div className="p-4">
@@ -181,6 +187,8 @@ export default function HomePage() {
               src="/images/bgkolam.png"
               alt="Produk Motor"
               className="w-full max-w-sm mx-auto drop-shadow-xl"
+              width={500}
+              height={500}
             />
           </div>
         </div>
@@ -213,6 +221,8 @@ export default function HomePage() {
                     src={`/images/${icon}`}
                     className="w-16 h-16 object-contain"
                     alt="icon"
+                    width={100}
+                    height={100}
                   />
                   <p className="text-base font-semibold sm:text-lg leading-snug">
                     {text}
@@ -237,6 +247,8 @@ export default function HomePage() {
                   src={`/images/${icon}`}
                   className="w-16 h-16 object-contain"
                   alt="icon"
+                  width={100}
+                  height={100}
                 />
                 <p className="text-base font-semibold sm:text-lg leading-snug">
                   {text}
@@ -271,6 +283,8 @@ export default function HomePage() {
                   src={`/images/isi${n}.png`}
                   alt={`Motor ${n}`}
                   className="w-full h-40 sm:h-48 object-cover hover:scale-105 transition-transform duration-300"
+                  width={500}
+                  height={500}
                 />
               </div>
             ))}

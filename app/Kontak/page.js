@@ -190,6 +190,8 @@ const Kontak = () => {
                 src="/images/bg-kontak.png"
                 alt="Ilustrasi Kontak"
                 className="max-w-[220px] md:max-w-sm object-contain drop-shadow-lg"
+                width={500}
+                height={500}
               />
             </div>
           </div>

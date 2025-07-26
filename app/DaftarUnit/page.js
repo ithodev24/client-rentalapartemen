@@ -204,12 +204,12 @@ export default function DaftarUnit() {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center items-center gap-4 mt-10">
+          <div className="flex justify-center items-center gap-4 mt-10 text-black">
             <button
               onClick={handlePrev}
               disabled={currentPage === 1}
               className={`px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition ${
-                currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""
+                currentPage === 1 ? " cursor-not-allowed" : ""
               }`}
             >
               &lt;

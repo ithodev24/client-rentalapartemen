@@ -130,7 +130,7 @@ export default function Artikel() {
         <div className="bg-[#C08931] px-4 sm:px-8 md:px-20 py-12 shadow-xl min-h-[50vh]">
           {filteredArticles.length === 0 ? (
             <div className="text-center text-white text-base py-10">
-              Tidak ada artikel yang cocok dengan pencarian.
+              Tidak ada artikel.
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -142,6 +142,8 @@ export default function Artikel() {
                         src={`http://localhost:3333/${article.thumbnail}`}
                         alt={article.title}
                         className="w-full h-full object-cover absolute inset-0"
+                        width={500}
+                        height={300}
                       />
                     </div>
                     <div className="p-4 flex flex-col justify-between flex-1">
@@ -165,7 +167,7 @@ export default function Artikel() {
 
           {/* Pagination */}
           {totalPages > 1 && filteredArticles.length > 0 && (
-            <div className="flex justify-center items-center gap-4 mt-10">
+            <div className="flex justify-center items-center gap-4 mt-10 text-black">
               <button
                 onClick={handlePrev}
                 disabled={currentPage === 1}
@@ -176,7 +178,7 @@ export default function Artikel() {
                 &lt;
               </button>
 
-              <span className="text-sm font-semibold text-white">
+              <span className="text-sm font-semibold">
                 {currentPage} / {totalPages}
               </span>
 

@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <Image src="/images/logosewa.png" alt="Logo" className="w-8 h-8" />
+          <Image src="/images/logosewa.png" alt="Logo" className="w-8 h-8" width={100} height={100}/>
           <span className="text-[#C79C20] font-semibold text-lg">
             Perfect Room
           </span>

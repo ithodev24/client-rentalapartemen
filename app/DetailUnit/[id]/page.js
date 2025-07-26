@@ -3,7 +3,7 @@
 import { use, useState } from "react";
 import { Units } from "../../../data/units";
 import Footer from "../../components/Footer";
-import BackButton from "../../components/BackButton";
+import { HiArrowLeft } from "react-icons/hi";
 import Image from "next/image";
 
 export default function DetailUnit({ params }) {
@@ -21,7 +21,13 @@ export default function DetailUnit({ params }) {
         className="relative w-full h-28 bg-cover bg-center"
         style={{ backgroundImage: "url(/images/RD-topdetailunit.png)" }}
       >
-        <BackButton />
+        <button
+          onClick={() => window.history.back()}
+          className="absolute top-4 sm:top-8 left-4 sm:left-8 bg-white/90 text-black px-3 py-2 sm:px-3 sm:py-3 rounded-full shadow font-medium flex items-center gap-1 sm:gap-2 hover:bg-gray-100 transition text-sm sm:text-base"
+        >
+          <HiArrowLeft className="text-lg sm:text-xl" />
+          <span className="hidden sm:inline"></span>
+        </button>
       </div>
 
       {/* Section Atas */}
@@ -33,6 +39,8 @@ export default function DetailUnit({ params }) {
             src={selectedImage}
             alt={unit.name}
             className="w-full h-[300px] object-cover rounded-xl"
+            width={500}
+            height={300}
           />
 
           {/* Galeri Thumbnail */}
@@ -47,6 +55,8 @@ export default function DetailUnit({ params }) {
                     selectedImage === img ? "border-2 border-yellow-500" : ""
                   }`}
                   alt={`thumb-${idx}`}
+                  width={100}
+                  height={100}
                 />
               ))}
             </div>
@@ -54,7 +64,7 @@ export default function DetailUnit({ params }) {
         </div>
 
         {/* Informasi Unit */}
-        <div className="flex flex-col gap-4 w-full md:w-1/2">
+        <div className="flex flex-col gap-4 w-full md:w-1/2 text-black">
           <h2 className="text-2xl font-bold">{unit.name}</h2>
 
           {/* Fasilitas */}
