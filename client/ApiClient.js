@@ -1,24 +1,24 @@
-const BASE_URL = 'http://localhost:3333' // ip be
+const BASE_URL = "http://localhost:3333"; // ip be
 
 export async function sendContactForm(data) {
   try {
     const response = await fetch(`${BASE_URL}/contact`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    })
+    });
 
-    const result = await response.json()
+    const result = await response.json();
 
     if (!response.ok) {
-      throw new Error(result.message || 'Gagal mengirim pesan')
+      throw new Error(result.message || "Gagal mengirim pesan");
     }
 
-    return result
+    return result;
   } catch (error) {
-    console.error('Error saat mengirim form:', error.message)
-    throw error
+    console.error("Error saat mengirim form:", error.message);
+    throw error;
   }
 }

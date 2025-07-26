@@ -1,17 +1,19 @@
 "use client";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="relative bg-white text-black overflow-hidden">
       {/* Ornamen bunga kiri atas */}
-      <img
+      <Image
         src="/images/footerkanan.png"
         alt="Flower Top Left"
         className="absolute top-[-10px] left-0 w-140 z-0"
       />
 
       {/* Ornamen bunga kanan bawah */}
-      <img
+      <Image
         src="/images/footerkiri.png"
         alt="Flower Bottom Right"
         className="absolute bottom-[-10px] right-0 w-100 mb-10 z-0"
@@ -23,32 +25,40 @@ export default function Footer() {
         <div className="flex flex-col items-start gap-6">
           {/* Ikon Media Sosial */}
           <div className="flex space-x-4">
-            {/* <a href="#"><img src="/images/icon_fb.png" alt="Facebook" className="w-7 h-7" /></a> */}
+            {/* <Link href="#"><Image src="/images/icon_fb.png" alt="Facebook" className="w-7 h-7" /></Link> */}
             {/* tiktok */}
-            <a
+            <Link
               href="https://www.tiktok.com/@perfectrooms.id?_t=ZS-8yJQHyTqH7i&_r=1"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/images/icon_tt.png" alt="Instagram" className="w-8 h-8" />
-            </a>
+              <Image
+                src="/images/icon_tt.png"
+                alt="Instagram"
+                className="w-8 h-8"
+              />
+            </Link>
 
             {/* WhatsApp */}
-            <a
+            <Link
               href="https://wa.me/6281280007220"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/images/icon_wa.png" alt="WhatsApp" className="w-7 h-7" />
-            </a>
+              <Image
+                src="/images/icon_wa.png"
+                alt="WhatsApp"
+                className="w-7 h-7"
+              />
+            </Link>
           </div>
 
           {/* Logo Bank */}
-        <div className="-ml-10 md:-ml-20 self-start bg-[#C08931] rounded-full px-6 py-2 shadow-md flex items-center space-x-6">
-            <img src="/images/pm_bni.png" alt="BNI" className="h-8" />
-            <img src="/images/pm_bca.png" alt="BCA" className="h-8" />
-            <img src="/images/pm_mandiri.png" alt="Mandiri" className="h-8" />
-            <img src="/images/pm_qris.png" alt="QRIS" className="h-8" />
+          <div className="-ml-10 md:-ml-20 self-start bg-[#C08931] rounded-full px-6 py-2 shadow-md flex items-center space-x-6">
+            <Image src="/images/pm_bni.png" alt="BNI" className="h-8" />
+            <Image src="/images/pm_bca.png" alt="BCA" className="h-8" />
+            <Image src="/images/pm_mandiri.png" alt="Mandiri" className="h-8" />
+            <Image src="/images/pm_qris.png" alt="QRIS" className="h-8" />
           </div>
         </div>
 
@@ -58,11 +68,31 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-gray-800 mb-2">Halaman</h4>
             <ul className="space-y-1">
-              <li><a href="/" className="hover:text-yellow-500">Beranda</a></li>
-              <li><a href="/artikel" className="hover:text-yellow-500">Artikel</a></li>
-              <li><a href="/DaftarUnit" className="hover:text-yellow-500">Daftar Unit</a></li>
-              <li><a href="/Testimoni" className="hover:text-yellow-500">Testimoni</a></li>
-              <li><a href="/Kontak" className="hover:text-yellow-500">Kontak</a></li>
+              <li>
+                <Link href="/" className="hover:text-yellow-500">
+                  Beranda
+                </Link>
+              </li>
+              <li>
+                <Link href="/artikel" className="hover:text-yellow-500">
+                  Artikel
+                </Link>
+              </li>
+              <li>
+                <Link href="/DaftarUnit" className="hover:text-yellow-500">
+                  Daftar Unit
+                </Link>
+              </li>
+              <li>
+                <Link href="/Testimoni" className="hover:text-yellow-500">
+                  Testimoni
+                </Link>
+              </li>
+              <li>
+                <Link href="/Kontak" className="hover:text-yellow-500">
+                  Kontak
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -70,17 +100,19 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-gray-800 mb-2">Kontak Kami</h4>
             <p className="mb-1">
-              <a href="mailto:ptdahliglobalindo@gmail.com" className="hover:text-yellow-500">
-              ptdahliglobalindo@gmail.com
-            </a>
+              <Link
+                href="mailto:ptdahliglobalindo@gmail.com"
+                className="hover:text-yellow-500"
+              >
+                ptdahliglobalindo@gmail.com
+              </Link>
             </p>
             <p>
-              <a href="tel:+6285724785060" className="hover:text-yellow-500">
+              <Link href="tel:+6285724785060" className="hover:text-yellow-500">
                 (+62) 812-8000-7220
-              </a>
+              </Link>
             </p>
             <p className="text-xs text-gray-600">Admin</p>
-            
           </div>
         </div>
 
@@ -88,7 +120,7 @@ export default function Footer() {
         <div className="text-sm">
           <h4 className="font-semibold text-gray-800 mb-2">Alamat</h4>
           <p>
-            <a
+            <Link
               href="https://www.google.com/maps?q=Jl.+Kebon+Kawung+No.49,+Pasir+Kaliki,+Cicendo,+Bandung,+Jawa+Barat"
               target="_blank"
               rel="noopener noreferrer"
@@ -96,16 +128,16 @@ export default function Footer() {
             >
               Kawasan, Apartment Grand Kamala Lagoon,
               <br />
-              Jl. KH. Noer Ali, RT.001/RW.002, Pekayon Jaya, 
+              Jl. KH. Noer Ali, RT.001/RW.002, Pekayon Jaya,
               <br></br>Kec. Bekasi Selatan, Kota Bekasi, Jawa Barat 17148
-            </a>
+            </Link>
           </p>
         </div>
       </div>
 
       {/* Copyright */}
       <div className="bg-[#C08931] py-2 text-center text-xs text-black">
-        @ptdahliglobalindo. Hak Cipta Dilindungi oleh undang-undang. 
+        @ptdahliglobalindo. Hak Cipta Dilindungi oleh undang-undang.
       </div>
     </footer>
   );

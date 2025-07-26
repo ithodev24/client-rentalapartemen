@@ -34,7 +34,7 @@ export const Units = [
     slug: "tipe-b",
     name: "1 Bedroom",
     description:
-    "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol, gemerlap kota Jakarta, dan area Midzone Barcley North yang eksklusif.",
+      "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol, gemerlap kota Jakarta, dan area Midzone Barcley North yang eksklusif.",
     image: "/images/1_bedroom.jpg",
     gallery: [
       "/images/1bed-1.jpg",
@@ -64,12 +64,9 @@ export const Units = [
     slug: "tipe-c",
     name: "2 Bedroom",
     description:
-    "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol, gemerlap kota Jakarta, dan area Midzone Barcley North yang eksklusif.",
+      "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol, gemerlap kota Jakarta, dan area Midzone Barcley North yang eksklusif.",
     image: "/images/2bed-1.jpg",
-    gallery: [
-      "/images/2bed.jpg",
-      "/images/2bed-2.jpg",
-    ],
+    gallery: ["/images/2bed.jpg", "/images/2bed-2.jpg"],
     daerah: "Bekasi",
     maxCapacity: "Bekasi",
     facilities: {
@@ -87,21 +84,21 @@ export const Units = [
     // status: "Tersedia",
   },
   {
-  id: 4,
-  slug: "emerald-north",
-  name: "Studio Full Furnish Emerald North Lt 29",
-  description:
-  "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol dan city light berada diarea Midzone Emerald North yang eksklusif.",
-  image: "/images/emerland29.jpg",
-  gallery: [
-    "/images/emerland29-1.jpg",
-    "/images/emerland29-2.jpg",
-    "/images/emerland29-3.jpg",
-  ],
-  daerah: "Bekasi",
-  maxCapacity: "2 Orang",
-  facilities: {
-    indoor: [
+    id: 4,
+    slug: "emerald-north",
+    name: "Studio Full Furnish Emerald North Lt 29",
+    description:
+      "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol dan city light berada diarea Midzone Emerald North yang eksklusif.",
+    image: "/images/emerland29.jpg",
+    gallery: [
+      "/images/emerland29-1.jpg",
+      "/images/emerland29-2.jpg",
+      "/images/emerland29-3.jpg",
+    ],
+    daerah: "Bekasi",
+    maxCapacity: "2 Orang",
+    facilities: {
+      indoor: [
         "AC",
         "TV",
         "Kulkas",
@@ -110,16 +107,16 @@ export const Units = [
         "WiFi & Netflix",
       ],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
+    },
+    startingPrice: "Rp 150.000",
+    // status: "Tersedia",
   },
-  startingPrice: "Rp 150.000",
-  // status: "Tersedia",
-},
   {
     id: 5,
     slug: "studio-barcley-north",
     name: "Studio Full Furnish Barcley North Lt 25",
     description:
-    "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol dan city light berada diarea Midzone Emerald North yang eksklusif.",
+      "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol dan city light berada diarea Midzone Emerald North yang eksklusif.",
     image: "/images/barcley.jpg",
     gallery: [
       "/images/barcley-1.jpg",
@@ -147,11 +144,9 @@ export const Units = [
     slug: "studio-barcley-north",
     name: "Studio Full Furnish Barcley North Lt 11",
     description:
-    "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol dan swimming pool berada diarea Lowzone Barcley North yang eksklusif.",
+      "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol dan swimming pool berada diarea Lowzone Barcley North yang eksklusif.",
     image: "/images/barcley11.jpg",
-    gallery: [
-      "/images/barcley11-1.jpg",
-    ],
+    gallery: ["/images/barcley11-1.jpg"],
     daerah: "Bekasi",
     maxCapacity: "2 Orang",
     facilities: {
@@ -173,7 +168,7 @@ export const Units = [
     slug: "studio-barcley-north-1",
     name: "Studio Full Furnish Barcley North Lt 28 Tipe A",
     description:
-    "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol gemerlap jakarta kota dan berada diarea Midzone Barcley North yang eksklusif.",
+      "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol gemerlap jakarta kota dan berada diarea Midzone Barcley North yang eksklusif.",
     image: "/images/barcley28.jpg",
     gallery: [
       "/images/barcley28-1.jpg",
@@ -203,14 +198,14 @@ export const Units = [
     slug: "studio-barcley-north-2",
     name: "Studio Full Furnish Barcley North Lt 28 Tipe B",
     description:
-    "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol gemerlap jakarta kota dan berada diarea Midzone Barcley North yang eksklusif.",
+      "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol gemerlap jakarta kota dan berada diarea Midzone Barcley North yang eksklusif.",
     image: "/images/2barcley.jpg",
     gallery: [
       "/images/2barcley-1.jpg",
       "/images/2barcley-2.jpg",
       "/images/2barcley-3.jpg",
       "/images/2barcley-4.jpg",
-      "/images/2barcley-5.jpg",  
+      "/images/2barcley-5.jpg",
       "/images/2barcley-6.jpg",
       "/images/2barcley-7.jpg",
       "/images/2barcley-8.jpg",
@@ -237,13 +232,13 @@ export const Units = [
     slug: "studio-Emerland-north-3",
     name: "Studio Full Furnish Emerland North Lt 25",
     description:
-    "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol dan city light berada diarea Midzone Emerald North yang eksklusif.",
+      "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol dan city light berada diarea Midzone Emerald North yang eksklusif.",
     image: "/images/barcley25.jpg",
     gallery: [
       "/images/barcley25-1.jpg",
       "/images/barcley25-2.jpg",
       "/images/barcley25-3.jpg",
-      "/images/barcley25-4.jpg", 
+      "/images/barcley25-4.jpg",
     ],
     daerah: "Bekasi",
     maxCapacity: "2 Orang",
@@ -266,22 +261,13 @@ export const Units = [
     slug: "studio-Barcley-north-4",
     name: "Studio Full Furnish Barcley North Lt 39 Unit 3908",
     description:
-    "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan kota dan berada diarea Highzone Barcley North yang eksklusif.",
+      "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan kota dan berada diarea Highzone Barcley North yang eksklusif.",
     image: "/images/barcley39.jpg",
-    gallery: [
-      "/images/barcley39-1.jpg",
-      "/images/barcley39-2.jpg",
-    ],
+    gallery: ["/images/barcley39-1.jpg", "/images/barcley39-2.jpg"],
     daerah: "Bekasi",
     maxCapacity: "2 Orang",
     facilities: {
-      indoor: [
-        "AC",
-        "TV",
-        "Kulkas",
-        "Kamar Mandi",
-        "WiFi & Netflix",
-      ],
+      indoor: ["AC", "TV", "Kulkas", "Kamar Mandi", "WiFi & Netflix"],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
     startingPrice: "Rp 150.000",
@@ -292,7 +278,7 @@ export const Units = [
     slug: "studio-Emerland-north-5",
     name: "Studio Full Furnish Emerland North Lt 03",
     description:
-    "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan kota bekasi dan berada diarea Lowzone Emerald North yang eksklusif.",
+      "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan kota bekasi dan berada diarea Lowzone Emerald North yang eksklusif.",
     image: "/images/emerland03.jpg",
     gallery: [
       "/images/emerland03-1.jpg",
@@ -302,13 +288,7 @@ export const Units = [
     daerah: "Bekasi",
     maxCapacity: "2 Orang",
     facilities: {
-      indoor: [
-        "AC",
-        "TV",
-        "Kulkas",
-        "Kamar Mandi",
-        "WiFi & Netflix",
-      ],
+      indoor: ["AC", "TV", "Kulkas", "Kamar Mandi", "WiFi & Netflix"],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
     startingPrice: "Rp 150.000",
@@ -347,12 +327,9 @@ export const Units = [
     slug: "studio-Barcley-north-6",
     name: "Studio Full Furnish Barcley North S9",
     description:
-    "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol dan kota jakarta berada diarea Highzone Barcley North yang eksklusif.",
+      "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol dan kota jakarta berada diarea Highzone Barcley North yang eksklusif.",
     image: "/images/barcleys9.jpg",
-    gallery: [
-      "/images/barcleys9-1.jpg",
-      "/images/barcleys9-2.jpg",
-    ],
+    gallery: ["/images/barcleys9-1.jpg", "/images/barcleys9-2.jpg"],
     daerah: "Bekasi",
     maxCapacity: "2 Orang",
     facilities: {

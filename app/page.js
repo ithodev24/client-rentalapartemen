@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Image from "next/image";
 
 function formatTanggalIndo(tanggalString) {
   const tanggal = new Date(tanggalString);
@@ -30,7 +31,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center text-white overflow-hidden">
-        <img
+        <Image
           src="/images/sewaapartemen_bg.png"
           alt="Background"
           className="absolute inset-0 w-full h-full object-cover"
@@ -71,7 +72,7 @@ export default function HomePage() {
               ["icon_lokasi.png", "Lokasi Strategis"],
             ].map(([icon, label], i) => (
               <div key={i} className="flex items-center justify-center gap-2">
-                <img src={`/images/${icon}`} className="w-10 h-10" />
+                <Image src={`/images/${icon}`} className="w-10 h-10" alt="icon" />
                 <p className="text-sm md:text-base font-medium">{label}</p>
               </div>
             ))}
@@ -86,7 +87,7 @@ export default function HomePage() {
           {articles[0] && (
             <div className="bg-white rounded-xl shadow-lg w-full lg:w-[2100px] h-auto lg:h-[500px] overflow-hidden">
               <div className="w-full h-64 lg:h-80 relative">
-                <img
+                <Image
                   src={`http://localhost:3333/${articles[0].thumbnail}`}
                   alt={articles[0].title}
                   className="w-full h-full object-cover"
@@ -120,7 +121,7 @@ export default function HomePage() {
                     className="bg-white rounded-xl overflow-hidden shadow-lg flex flex-col w-full"
                   >
                     <div className="w-full h-64 lg:h-30 relative">
-                      <img
+                      <Image
                         src={`http://localhost:3333/${item.thumbnail}`}
                         alt={item.title}
                         className="w-full h-full object-cover"
@@ -154,7 +155,9 @@ export default function HomePage() {
         <div className="flex flex-col lg:flex-row items-center gap-10 max-w-7xl mx-auto">
           <div className="flex-1 text-center lg:text-left">
             <h2 className="text-3xl font-bold">Perfect Room</h2>
-            <h3 className="text-xl font-semibold mb-3">Sewa Apartemen Bekasi</h3>
+            <h3 className="text-xl font-semibold mb-3">
+              Sewa Apartemen Bekasi
+            </h3>
             <p className="text-sm sm:text-base leading-relaxed">
               Sebagai bagian dari ekosistem layanan PT Dahlia Global Indo,
               Pixelnesia hadir untuk menjawab kebutuhan masyarakat modern yang
@@ -174,7 +177,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="flex-1">
-            <img
+            <Image
               src="/images/bgkolam.png"
               alt="Produk Motor"
               className="w-full max-w-sm mx-auto drop-shadow-xl"
@@ -193,15 +196,27 @@ export default function HomePage() {
             <div className="flex flex-col gap-4">
               {[
                 ["icon-syarat.png", "Syarat Sewa yang Ringan dan Tidak Ribet"],
-                ["icon-kualitas.png", "Kualitas iPhone Terjamin dan Sudah Legal"],
-                ["icon-pembayaran.png", "Metode Pembayaran Aman dan Profesional"],
+                [
+                  "icon-kualitas.png",
+                  "Kualitas iPhone Terjamin dan Sudah Legal",
+                ],
+                [
+                  "icon-pembayaran.png",
+                  "Metode Pembayaran Aman dan Profesional",
+                ],
               ].map(([icon, text], i) => (
                 <div
                   key={i}
                   className="bg-white text-black p-3 rounded shadow flex items-center gap-3 h-[90px] w-full max-w-full sm:max-w-[480px]"
                 >
-                  <img src={`/images/${icon}`} className="w-16 h-16 object-contain" />
-                  <p className="text-base font-semibold sm:text-lg leading-snug">{text}</p>
+                  <Image
+                    src={`/images/${icon}`}
+                    className="w-16 h-16 object-contain"
+                    alt="icon"
+                  />
+                  <p className="text-base font-semibold sm:text-lg leading-snug">
+                    {text}
+                  </p>
                 </div>
               ))}
             </div>
@@ -218,8 +233,14 @@ export default function HomePage() {
                 key={i}
                 className="bg-white text-black p-3 rounded shadow flex items-center gap-3 h-[90px] w-full max-w-full sm:max-w-[480px]"
               >
-                <img src={`/images/${icon}`} className="w-16 h-16 object-contain" />
-                <p className="text-base font-semibold sm:text-lg leading-snug">{text}</p>
+                <Image
+                  src={`/images/${icon}`}
+                  className="w-16 h-16 object-contain"
+                  alt="icon"
+                />
+                <p className="text-base font-semibold sm:text-lg leading-snug">
+                  {text}
+                </p>
               </div>
             ))}
           </div>
@@ -236,8 +257,8 @@ export default function HomePage() {
           <p className="text-lg sm:text-xl mb-4">
             Kami berkomitmen untuk menyediakan unit motor terbaik bagi setiap
             penyewa, <br className="hidden sm:block" />
-            karena kenyamanan, kepuasan, dan keamanan Anda adalah prioritas utama
-            kami.
+            karena kenyamanan, kepuasan, dan keamanan Anda adalah prioritas
+            utama kami.
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 mb-10">
             NIKMATI WAKTU TERBAIKMU
@@ -246,7 +267,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-10">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
               <div key={n} className="overflow-hidden rounded-xl shadow-md">
-                <img
+                <Image
                   src={`/images/isi${n}.png`}
                   alt={`Motor ${n}`}
                   className="w-full h-40 sm:h-48 object-cover hover:scale-105 transition-transform duration-300"

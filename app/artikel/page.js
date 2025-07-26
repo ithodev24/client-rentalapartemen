@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 import AnimatePage from "../components/AnimatePage";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Artikel() {
   const [articles, setArticles] = useState([]);
@@ -53,7 +54,10 @@ export default function Artikel() {
     const parts = text.split(regex);
     return parts.map((part, index) =>
       part.toLowerCase() === keyword.toLowerCase() ? (
-        <span key={index} className="bg-[#C08931] text-white font-semibold px-1 rounded">
+        <span
+          key={index}
+          className="bg-[#C08931] text-white font-semibold px-1 rounded"
+        >
           {part}
         </span>
       ) : (
@@ -69,10 +73,14 @@ export default function Artikel() {
   const totalPages = Math.ceil(filteredArticles.length / itemsPerPage);
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentArticles = filteredArticles.slice(indexOfFirstItem, indexOfLastItem);
+  const currentArticles = filteredArticles.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
 
   const handlePrev = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
-  const handleNext = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+  const handleNext = () =>
+    setCurrentPage((prev) => Math.min(prev + 1, totalPages));
 
   if (loading) {
     return (
@@ -130,7 +138,7 @@ export default function Artikel() {
                 <Link href={`/artikel/${article.slug}`} key={article.id}>
                   <div className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 shadow-xl flex flex-col h-[320px]">
                     <div className="w-full h-40 relative overflow-hidden">
-                      <img
+                      <Image
                         src={`http://localhost:3333/${article.thumbnail}`}
                         alt={article.title}
                         className="w-full h-full object-cover absolute inset-0"
@@ -176,7 +184,9 @@ export default function Artikel() {
                 onClick={handleNext}
                 disabled={currentPage === totalPages}
                 className={`px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition ${
-                  currentPage === totalPages ? "opacity-50 cursor-not-allowed" : ""
+                  currentPage === totalPages
+                    ? "opacity-50 cursor-not-allowed"
+                    : ""
                 }`}
               >
                 &gt;

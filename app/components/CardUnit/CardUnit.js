@@ -1,15 +1,12 @@
 "use client";
+import Image from "next/image";
 
 const CardUnit = ({ name, description, image, role = "Mahasiswa" }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 w-full flex flex-col h-full">
       {/* Gambar */}
       <div className="relative w-full h-40 sm:h-44 bg-white rounded-lg overflow-hidden">
-        <img 
-          src={image} 
-          alt={name} 
-          className="w-full h-full object-cover"
-        />
+        <Image src={image} alt={name} className="w-full h-full object-cover" />
       </div>
 
       {/* Konten */}
@@ -20,18 +17,23 @@ const CardUnit = ({ name, description, image, role = "Mahasiswa" }) => {
         </span>
 
         {/* Nama & Deskripsi */}
-        <div className="mb-4 min-h-[88px]"> {/* Tinggi minimum konten agar seragam */}
-          <h3 className="text-base font-bold text-gray-800 line-clamp-2">{name}</h3>
-          <p className="text-sm text-gray-700 mt-1 line-clamp-3">{description}</p>
+        <div className="mb-4 min-h-[88px]">
+          {" "}
+          {/* Tinggi minimum konten agar seragam */}
+          <h3 className="text-base font-bold text-gray-800 line-clamp-2">
+            {name}
+          </h3>
+          <p className="text-sm text-gray-700 mt-1 line-clamp-3">
+            {description}
+          </p>
         </div>
 
         {/* Tombol */}
         <button className="bg-[#C08931] text-black px-4 py-2 rounded-xl hover:bg-[#a87427] transition-all duration-200 w-full text-sm font-semibold">
-      Lihat Detail
-    </button>
+          Lihat Detail
+        </button>
       </div>
     </div>
-    
   );
 };
 

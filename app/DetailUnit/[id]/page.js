@@ -4,7 +4,7 @@ import { use, useState } from "react";
 import { Units } from "../../../data/units";
 import Footer from "../../components/Footer";
 import BackButton from "../../components/BackButton";
-
+import Image from "next/image";
 
 export default function DetailUnit({ params }) {
   const { id } = use(params);
@@ -29,7 +29,7 @@ export default function DetailUnit({ params }) {
         {/* Gambar & Galeri */}
         <div className="flex flex-col gap-4 w-full md:w-1/2">
           {/* Gambar Utama */}
-          <img
+          <Image
             src={selectedImage}
             alt={unit.name}
             className="w-full h-[300px] object-cover rounded-xl"
@@ -39,7 +39,7 @@ export default function DetailUnit({ params }) {
           <div className="overflow-x-auto scrollbar-hide">
             <div className="flex gap-2 w-max">
               {[unit.image, ...(unit.gallery || [])].map((img, idx) => (
-                <img
+                <Image
                   key={idx}
                   src={img}
                   onClick={() => setSelectedImage(img)}

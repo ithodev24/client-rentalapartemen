@@ -1,21 +1,23 @@
 "use client";
 
-import { Units } from "../../../data/units";
-import Footer from "../../components/Footer";
-import BackButton from "../../components/BackButton";
+import { Units } from "@/data/units";
+import Footer from "../components/Footer";
+import BackButton from "../components/BackButton";
+import Image from "next/image";
 
 export default function DetailUnit({ params }) {
   const id = params?.id;
   const unit = Units.find((u) => u.id === parseInt(id));
 
-  if (!unit) return <div className="p-10 text-center">Unit tidak ditemukan</div>;
+  if (!unit)
+    return <div className="p-10 text-center">Unit tidak ditemukan</div>;
 
   return (
     <div className="w-full font-sans bg-white">
       {/* Header */}
       <div
         className="relative w-full h-28 bg-cover bg-center"
-        style={{ backgroundImage: 'url(/images/RD-topdetailunit.png)' }}
+        style={{ backgroundImage: "url(/images/RD-topdetailunit.png)" }}
       >
         <BackButton />
       </div>
@@ -26,7 +28,7 @@ export default function DetailUnit({ params }) {
         <div className="flex flex-row gap-4 w-full md:w-1/2">
           <div className="flex flex-col gap-2 w-20">
             {unit.gallery.map((img, idx) => (
-              <img
+              <Image
                 key={idx}
                 src={img}
                 alt={`thumbnail-${idx}`}
@@ -34,7 +36,7 @@ export default function DetailUnit({ params }) {
               />
             ))}
           </div>
-          <img
+          <Image
             src={unit.image}
             alt={unit.name}
             className="flex-1 h-[280px] sm:h-[320px] object-cover rounded-xl"
@@ -79,9 +81,15 @@ export default function DetailUnit({ params }) {
 
           {/* Tag lokasi & kapasitas */}
           <div className="flex gap-2 flex-wrap text-sm">
-            <span className="bg-gray-100 px-4 py-1 rounded-full">{unit.daerah}</span>
-            <span className="bg-gray-100 px-4 py-1 rounded-full">{unit.maxCapacity}</span>
-            <span className="bg-gray-100 px-4 py-1 rounded-full">{unit.status}</span>
+            <span className="bg-gray-100 px-4 py-1 rounded-full">
+              {unit.daerah}
+            </span>
+            <span className="bg-gray-100 px-4 py-1 rounded-full">
+              {unit.maxCapacity}
+            </span>
+            <span className="bg-gray-100 px-4 py-1 rounded-full">
+              {unit.status}
+            </span>
           </div>
 
           {/* Tombol Sewa */}
@@ -105,7 +113,9 @@ export default function DetailUnit({ params }) {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Weekday */}
             <div className="bg-white rounded-xl shadow p-6">
-              <h4 className="text-center font-semibold text-lg mb-4">Weekday</h4>
+              <h4 className="text-center font-semibold text-lg mb-4">
+                Weekday
+              </h4>
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b text-gray-700">
@@ -114,19 +124,23 @@ export default function DetailUnit({ params }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {Object.entries(unit.prices.weekday || {}).map(([durasi, harga], idx) => (
-                    <tr key={idx}>
-                      <td className="py-1">{durasi}</td>
-                      <td className="py-1 text-right">{harga}</td>
-                    </tr>
-                  ))}
+                  {Object.entries(unit.prices.weekday || {}).map(
+                    ([durasi, harga], idx) => (
+                      <tr key={idx}>
+                        <td className="py-1">{durasi}</td>
+                        <td className="py-1 text-right">{harga}</td>
+                      </tr>
+                    )
+                  )}
                 </tbody>
               </table>
             </div>
 
             {/* Weekend */}
             <div className="bg-white rounded-xl shadow p-6">
-              <h4 className="text-center font-semibold text-lg mb-4">Weekend</h4>
+              <h4 className="text-center font-semibold text-lg mb-4">
+                Weekend
+              </h4>
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b text-gray-700">
@@ -135,12 +149,14 @@ export default function DetailUnit({ params }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {Object.entries(unit.prices.weekend || {}).map(([durasi, harga], idx) => (
-                    <tr key={idx}>
-                      <td className="py-1">{durasi}</td>
-                      <td className="py-1 text-right">{harga}</td>
-                    </tr>
-                  ))}
+                  {Object.entries(unit.prices.weekend || {}).map(
+                    ([durasi, harga], idx) => (
+                      <tr key={idx}>
+                        <td className="py-1">{durasi}</td>
+                        <td className="py-1 text-right">{harga}</td>
+                      </tr>
+                    )
+                  )}
                 </tbody>
               </table>
             </div>

@@ -65,7 +65,6 @@ export default function DaftarUnit() {
     <div className="bg-white min-h-screen">
       <Navbar />
       <AnimatePage>
-
         {/* Header & Search */}
         <div
           className="relative bg-cover bg-center h-auto py-6 sm:h-56 md:h-64 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
@@ -85,7 +84,12 @@ export default function DaftarUnit() {
                 className="w-full py-2 pl-4 pr-10 rounded-l-full outline-none border border-[#FFE644] text-red-800 bg-white placeholder-yellow-600 focus:ring-2 focus:ring-white text-sm sm:text-base"
               />
               <span className="absolute right-3 top-1/2 -translate-y-1/2 text-red-600">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -101,7 +105,12 @@ export default function DaftarUnit() {
               onClick={() => setShowFilter(!showFilter)}
               className="bg-white text-red-700 p-2 border border-[#FFE644] rounded-r-full"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -193,13 +202,15 @@ export default function DaftarUnit() {
           )}
         </div>
 
-       {/* Pagination */}
+        {/* Pagination */}
         {totalPages > 1 && (
           <div className="flex justify-center items-center gap-4 mt-10">
             <button
               onClick={handlePrev}
               disabled={currentPage === 1}
-              className={`px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""}`}
+              className={`px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition ${
+                currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""
+              }`}
             >
               &lt;
             </button>
@@ -211,7 +222,11 @@ export default function DaftarUnit() {
             <button
               onClick={handleNext}
               disabled={currentPage === totalPages}
-              className={`px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : ""}`}
+              className={`px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition ${
+                currentPage === totalPages
+                  ? "opacity-50 cursor-not-allowed"
+                  : ""
+              }`}
             >
               &gt;
             </button>

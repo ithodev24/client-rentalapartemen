@@ -12,9 +12,13 @@ const Notification = ({ type = "success", message, onClose }) => {
   if (!message) return null;
 
   const icon =
-    type === "success" ? <CheckCircle className="text-green-600 w-7 h-7" /> :
-    type === "error" ? <XCircle className="text-red-600 w-7 h-7" /> :
-    <AlertTriangle className="text-yellow-500 w-7 h-7" />;
+    type === "success" ? (
+      <CheckCircle className="text-green-600 w-7 h-7" />
+    ) : type === "error" ? (
+      <XCircle className="text-red-600 w-7 h-7" />
+    ) : (
+      <AlertTriangle className="text-yellow-500 w-7 h-7" />
+    );
 
   return (
     <div className="fixed inset-0 flex justify-center items-center z-50 bg-black/30">
@@ -34,7 +38,11 @@ const Notification = ({ type = "success", message, onClose }) => {
           {/* Teks */}
           <div className="text-left">
             <h3 className="text-md font-semibold text-gray-800 capitalize">
-              {type === "success" ? "Berhasil" : type === "error" ? "Gagal" : "Peringatan"}
+              {type === "success"
+                ? "Berhasil"
+                : type === "error"
+                ? "Gagal"
+                : "Peringatan"}
             </h3>
             <p className="text-sm text-gray-600 mt-1">{message}</p>
           </div>
