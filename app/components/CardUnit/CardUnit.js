@@ -29,7 +29,7 @@ const CardUnit = ({ name, description, image, role = "Mahasiswa" }) => {
         </div>
 
         {/* Tombol */}
-        <button className="bg-[#C08931] text-black px-4 py-2 rounded-xl hover:bg-[#a87427] transition-all duration-200 w-full text-sm font-semibold">
+        <button className="bg-[#C08931] text-white px-4 py-2 rounded-xl hover:bg-[#a87427] transition-all duration-200 w-full text-sm font-semibold">
           Lihat Detail
         </button>
       </div>

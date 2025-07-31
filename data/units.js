@@ -26,7 +26,7 @@ export const Units = [
       ],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 150.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
   {
@@ -35,10 +35,11 @@ export const Units = [
     name: "1 Bedroom",
     description:
       "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol, gemerlap kota Jakarta, dan area Midzone Barcley North yang eksklusif.",
-    image: "/images/1_bedroom.jpg",
+    image: "/images/1br.jpg",
     gallery: [
-      "/images/1bed-1.jpg",
-      "/images/1bed-2.jpg",
+      "/images/1br-1.jpg",
+      "/images/1br-2.jpg",
+      "/images/1br-3.jpg"
       // "/images/isi3-A.png",
       // "/images/isi4-A.png",
       // "/images/isi5-A.png",
@@ -56,7 +57,7 @@ export const Units = [
       ],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 150.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
   {
@@ -65,8 +66,14 @@ export const Units = [
     name: "2 Bedroom",
     description:
       "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol, gemerlap kota Jakarta, dan area Midzone Barcley North yang eksklusif.",
-    image: "/images/2bed-1.jpg",
-    gallery: ["/images/2bed.jpg", "/images/2bed-2.jpg"],
+    image: "/images/2br.jpg",
+    gallery: [
+      "/images/2br-1.jpg",
+      "/images/2br-2.jpg",
+      "/images/2br-3.jpg",
+      "/images/2br-4.jpg",
+      "/images/2br-5.jpg"
+    ],
     daerah: "Bekasi",
     maxCapacity: "Bekasi",
     facilities: {
@@ -80,7 +87,7 @@ export const Units = [
       ],
       outdoor: ["Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 299.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
   {
@@ -108,7 +115,7 @@ export const Units = [
       ],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 150.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
   {
@@ -136,7 +143,7 @@ export const Units = [
       ],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 150.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
   {
@@ -160,7 +167,7 @@ export const Units = [
       ],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 150.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
   {
@@ -190,7 +197,7 @@ export const Units = [
       ],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 150.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
   {
@@ -224,7 +231,7 @@ export const Units = [
       ],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 150.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
   {
@@ -253,7 +260,7 @@ export const Units = [
       ],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 150.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
   {
@@ -270,7 +277,7 @@ export const Units = [
       indoor: ["AC", "TV", "Kulkas", "Kamar Mandi", "WiFi & Netflix"],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 150.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
   {
@@ -291,7 +298,7 @@ export const Units = [
       indoor: ["AC", "TV", "Kulkas", "Kamar Mandi", "WiFi & Netflix"],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 150.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
   {
@@ -319,7 +326,7 @@ export const Units = [
       ],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 150.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
   {
@@ -343,7 +350,7 @@ export const Units = [
       ],
       outdoor: ["Green Garden", "Kolam Renang", "Akses GYM", "Mall"],
     },
-    startingPrice: "Rp 150.000",
+    startingPrice: "Rp 199.000",
     // status: "Tersedia",
   },
 ];

@@ -52,13 +52,13 @@ export default function HomePage() {
             <div className="mt-6 flex justify-end gap-2 flex-wrap">
               <a
                 href="/unit"
-                className="bg-[#C08931] text-black px-6 py-2 rounded-l-full shadow hover:bg-yellow-300"
+                className="bg-[#C08931] text-white px-6 py-2 rounded-l-full shadow hover:bg-yellow-300"
               >
                 Lihat Apartemen
               </a>
               <a
                 href="/kontak"
-                className="bg-[#C08931] text-black px-6 py-2 rounded-r-full shadow hover:bg-yellow-300"
+                className="bg-[#C08931] text-white px-6 py-2 rounded-r-full shadow hover:bg-yellow-300"
               >
                 Hubungi Kami
               </a>
