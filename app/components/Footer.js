@@ -59,38 +59,25 @@ export default function Footer() {
                 height={50}
               />
             </Link>
+
+             {/* Instagram */}
+            <Link
+              href="https://www.instagram.com/pixelnesia.id?utm_source=ig_web_button_share_sheet&igsh=MTFudWg1N2hhZGswbw=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/images/icon_ig.png" alt="Instagram" width={28} height={28} className="w-6 h-6" />
+            </Link>
           </div>
 
           {/* Logo Bank */}
-          <div className="-ml-10 md:-ml-20 self-start bg-[#C08931] rounded-full px-6 py-2 shadow-md flex items-center space-x-6">
-            <Image
-              src="/images/pm_bni.png"
-              alt="BNI"
-              className="h-8"
-              width={50}
-              height={50}
-            />
-            <Image
-              src="/images/pm_bca.png"
-              alt="BCA"
-              className="h-8"
-              width={50}
-              height={50}
-            />
-            <Image
-              src="/images/pm_mandiri.png"
-              alt="Mandiri"
-              className="h-8"
-              width={50}
-              height={50}
-            />
-            <Image
-              src="/images/pm_qris.png"
-              alt="QRIS"
-              className="h-8"
-              width={50}
-              height={50}
-            />
+          <div className="absolute bottom-24 left-0 bg-[#C08931] py-2 pr-4 pl-2 rounded-full flex items-center gap-4 shadow-md z-10">
+            <Image src="/images/pm_bni.png" alt="BNI" width={24} height={24} className="w-8 h-8 object-contain" />
+            <Image src="/images/pm_bca.png" alt="BCA" width={24} height={24} className="w-8 h-8 object-contain" />
+            <Image src="/images/pm_mandiri.png" alt="Mandiri" width={24} height={24} className="w-8 h-8 object-contain" />
+            <Image src="/images/pm_qris.png" alt="QRIS" width={24} height={24} className="w-8 h-8 object-contain" />
+            <Image src="/images/pm_mastercard.png" alt="Mastercard" width={24} height={24} className="w-8 h-8 object-contain" />
+            <Image src="/images/pm_visa.png" alt="Visa" width={24} height={24} className="w-8 h-8 object-contain" />
           </div>
         </div>
 

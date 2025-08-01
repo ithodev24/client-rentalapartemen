@@ -18,7 +18,7 @@ export default function HomePage() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("https://backend.ptdahliaglobalindo.id/article?entity=SEWA_APARTEMENT")
+    fetch("https://backend.ptdahliaglobalindo.id/article?entity=SEWA_APARTMENT")
       .then((res) => res.json())
       .then((data) => {
         setArticles(data.slice(0, 3)); // Ambil 3 artikel pertama
