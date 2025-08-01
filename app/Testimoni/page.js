@@ -11,19 +11,19 @@ const testimonials = [
   {
     name: "Riyadatunnisa",
     role: "Mahasiswi",
-    video: "/videos/Trevo - Aplikasi Rental Mobil.mp4",
+    video: "/videos/testimoni-room-1.mp4",
     text: "Motornya nyaman banget, dapet fasilitas keamanan juga. Untuk pengambilan motor bisa diantar sesuai dengan alamat persetujuan, mantap.",
   },
   {
-    name: "Rudi Jonh",
+    name: "Ayu Nadya",
     role: "Wisatawan",
-    video: "/videos/Trevo - Aplikasi Rental Mobil.mp4",
+    video: "/videos/testimoni-room-2.mp4",
     text: "Pelayanan sangat memuaskan, motor dalam kondisi prima dan proses sewa mudah sekali. Akan sewa lagi next time!",
   },
   {
-    name: "Cahaya Insani",
+    name: "Dhia Naomi",
     role: "Mahasiswi",
-    video: "/videos/Trevo - Aplikasi Rental Mobil.mp4",
+    video: "/videos/testimoni-room-3.mp4",
     text: "Harga terjangkau untuk kualitas motor yang diberikan. Proses pengantaran cepat dan petugasnya ramah.",
   },
 ];

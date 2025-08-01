@@ -5,6 +5,7 @@ import { Units } from "../../../data/units";
 import Footer from "../../components/Footer";
 import { HiArrowLeft } from "react-icons/hi";
 import Image from "next/image";
+import { generateWhatsAppLink } from "@/data/adminContacts";
 
 export default function DetailUnit({ params }) {
   const { id } = use(params);
@@ -114,19 +115,19 @@ export default function DetailUnit({ params }) {
 
           {/* Tombol Sewa */}
           <div className="pt-2">
-            <a
-              href="https://wa.me/6281280007220"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <button className="bg-[#C08931] hover:bg-[#a87427] text-black font-bold py-2 w-full rounded-full shadow">
-                Sewa Sekarang
-              </button>
-            </a>
+              <a
+                href={generateWhatsAppLink(unit)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 w-full rounded-full shadow">
+                  Sewa Sekarang
+                </button>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
       <Footer />
     </div>

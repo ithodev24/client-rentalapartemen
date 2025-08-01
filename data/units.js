@@ -66,13 +66,13 @@ export const Units = [
     name: "2 Bedroom",
     description:
       "Unit dilengkapi dengan kamar tidur luas, dapur bersih, ruang tamu yang nyaman, serta balkon yang menyuguhkan pemandangan tol, gemerlap kota Jakarta, dan area Midzone Barcley North yang eksklusif.",
-    image: "/images/2br.jpg",
+    image: "/images/2brr.jpg",
     gallery: [
-      "/images/2br-1.jpg",
-      "/images/2br-2.jpg",
-      "/images/2br-3.jpg",
-      "/images/2br-4.jpg",
-      "/images/2br-5.jpg"
+      "/images/2brr-1.jpg",
+      "/images/2brr-2.jpg",
+      "/images/2brr-3.jpg",
+      "/images/2brr-4.jpg",
+      "/images/2brr-5.jpg"
     ],
     daerah: "Bekasi",
     maxCapacity: "Bekasi",
