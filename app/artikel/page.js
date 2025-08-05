@@ -101,10 +101,11 @@ export default function Artikel() {
               <h1 className="text-2xl md:text-3xl font-bold text-black mb-4">
                 ARTIKEL KAMI
               </h1>
-              <p className="text-gray-600 text-sm md:text-base max-w-2xl text-justify leading-relaxed tracking-wide">
-                Perfect Room aktif menginformasikan berbagai kegiatan untuk
-                <br />
-                meningkatkan kualitas layanan di bidang rental
+              <p className="text-gray-600 text-sm md:text-base max-w-2xl text-left leading-relaxed tracking-wide">
+
+                Perfect Room aktif menginformasikan berbagai kegiatan untuk 
+                <span className="hidden md:inline"><br /></span>{' '}
+                 meningkatkan kualitas layanan di bidang rental
               </p>
             </div>
 

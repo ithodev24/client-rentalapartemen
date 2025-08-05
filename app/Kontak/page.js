@@ -133,7 +133,7 @@ const Kontak = () => {
                   placeholder="Nama"
                   value={form.nama}
                   onChange={handleChange}
-                  className="w-full md:w-1/2 p-3 rounded-full bg-white text-sm text-black outline-none"
+                  className="w-full md:w-1/2 p-3 rounded-full bg-white text-sm text-black dark:text-black outline-none"
                 />
                 <div className="w-full md:w-1/2">
                   <input
@@ -142,7 +142,7 @@ const Kontak = () => {
                     placeholder="No Telepon"
                     value={form.telepon}
                     onChange={handleChange}
-                    className="w-full p-3 rounded-full bg-white text-sm text-black outline-none"
+                    className="w-full p-3 rounded-full bg-white text-sm text-black dark:text-black outline-none"
                   />
                   {errors.telepon && (
                     <p className="text-red-600 text-sm mt-1">
@@ -159,7 +159,7 @@ const Kontak = () => {
                   placeholder="Email"
                   value={form.email}
                   onChange={handleChange}
-                  className="w-full p-3 rounded-full bg-white text-sm text-black outline-none"
+                  className="w-full p-3 rounded-full bg-white text-sm text-black dark:text-black outline-none"
                 />
                 {errors.email && (
                   <p className="text-red-600 text-sm mt-1">{errors.email}</p>
@@ -172,7 +172,7 @@ const Kontak = () => {
                 rows="5"
                 value={form.pesan}
                 onChange={handleChange}
-                className="w-full p-3 rounded-xl bg-white text-sm text-black outline-none"
+                className="w-full p-3 rounded-xl bg-white text-sm text-black dark:text-black outline-none"
               />
 
               <button

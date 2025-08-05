@@ -70,8 +70,8 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Logo Bank */}
-          <div className="absolute bottom-24 left-0 bg-[#C08931] py-2 pr-4 pl-2 rounded-full flex items-center gap-4 shadow-md z-10">
+         {/* Logo Bank */}
+          <div className="mt-0 bg-[#C08931] py-2 px-4 rounded-full flex flex-wrap items-center justify-center gap-4 shadow-md z-10 w-fit md:w-auto">
             <Image src="/images/pm_bni.png" alt="BNI" width={24} height={24} className="w-8 h-8 object-contain" />
             <Image src="/images/pm_bca.png" alt="BCA" width={24} height={24} className="w-8 h-8 object-contain" />
             <Image src="/images/pm_mandiri.png" alt="Mandiri" width={24} height={24} className="w-8 h-8 object-contain" />

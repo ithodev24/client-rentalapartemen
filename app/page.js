@@ -203,14 +203,14 @@ export default function HomePage() {
             </h2>
             <div className="flex flex-col gap-4">
               {[
-                ["icon-syarat.png", "Syarat Sewa yang Ringan dan Tidak Ribet"],
+                ["icon-syarat.png", "Syarat Sewa yang Ringan dan Tidak Ribet"], //rev
                 [
                   "icon-kualitas.png",
-                  "Kualitas iPhone Terjamin dan Sudah Legal",
+                  "Privasi Pelanggan Terjamin Aman", //rev
                 ],
                 [
                   "icon-pembayaran.png",
-                  "Metode Pembayaran Aman dan Profesional",
+                  "Tanpa Deposit", //rev
                 ],
               ].map(([icon, text], i) => (
                 <div
@@ -234,10 +234,10 @@ export default function HomePage() {
 
           <div className="flex flex-col gap-4">
             {[
-              ["icon-verif.png", "Verifikasi Data Cepat dan Mudah"],
-              ["icon-terbuka.png", "Terbuka untuk Semua Kalangan"],
-              ["icon-cod.png", "Layanan Antar Jemput Fleksibel (COD)"],
-              ["icon-data.png", "Data Pribadi Pelanggan Terjamin Aman"],
+              ["icon-verif.png", "Beragam tipe unit tersedia sesuai kebutuhan"], //rev
+              ["icon-terbuka.png", "Bisa request unit sesuai preferensi"], //rev
+              ["icon-cod.png", "Tersedia sewa harian, mingguan, hingga bulanan"], //rev
+              // ["icon-data.png", "Data Pribadi Pelanggan Terjamin Aman"],
             ].map(([icon, text], i) => (
               <div
                 key={i}
