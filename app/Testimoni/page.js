@@ -12,19 +12,19 @@ const testimonials = [
     name: "Riyadatunnisa",
     role: "Mahasiswi",
     video: "/videos/testimoni-room-1.mp4",
-    text: "Motornya nyaman banget, dapet fasilitas keamanan juga. Untuk pengambilan motor bisa diantar sesuai dengan alamat persetujuan, mantap.",
+    text: "Apartemennya nyaman dan bersih, cocok banget buat mahasiswa. Fasilitasnya lengkap dan lokasi strategis.",
   },
   {
     name: "Ayu Nadya",
     role: "Wisatawan",
     video: "/videos/testimoni-room-2.mp4",
-    text: "Pelayanan sangat memuaskan, motor dalam kondisi prima dan proses sewa mudah sekali. Akan sewa lagi next time!",
+    text: "Selama liburan, saya merasa seperti di rumah sendiri. Apartemennya nyaman, akses mudah, dan stafnya sangat membantu.",
   },
   {
     name: "Dhia Naomi",
     role: "Mahasiswi",
     video: "/videos/testimoni-room-3.mp4",
-    text: "Harga terjangkau untuk kualitas motor yang diberikan. Proses pengantaran cepat dan petugasnya ramah.",
+    text: "Apartemen dari Perfect Room punya kualitas bagus dengan harga terjangkau. Proses pemesanan cepat dan aman, recommended!",
   },
 ];
 
