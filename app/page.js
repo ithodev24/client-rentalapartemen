@@ -194,70 +194,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Kenapa Harus Memilih */}
-      <section className="bg-[#C08931] text-black px-4 py-10 md:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-snug">
-              Kenapa Harus Memilih <br /> Perfect Room?
-            </h2>
-            <div className="flex flex-col gap-4">
-              {[
-                ["icon-syarat.png", "Syarat Sewa yang Ringan dan Tidak Ribet"], //rev
-                [
-                  "icon-kualitas.png",
-                  "Privasi Pelanggan Terjamin Aman", //rev
-                ],
-                [
-                  "icon-pembayaran.png",
-                  "Tanpa Deposit", //rev
-                ],
-              ].map(([icon, text], i) => (
-                <div
-                  key={i}
-                  className="bg-white text-black p-3 rounded shadow flex items-center gap-3 h-[90px] w-full max-w-full sm:max-w-[480px]"
-                >
-                  <Image
-                    src={`/images/${icon}`}
-                    className="w-16 h-16 object-contain"
-                    alt="icon"
-                    width={100}
-                    height={100}
-                  />
-                  <p className="text-base font-semibold sm:text-lg leading-snug">
-                    {text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+     {/* Kenapa Harus Memilih */}
+<section className="bg-[#C08931] text-black px-4 py-10 md:px-6 lg:px-8">
+  <div className="max-w-6xl mx-auto">
+<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-snug text-center">
+  Kenapa Harus Memilih Perfect Room?
+</h2>
 
-          <div className="flex flex-col gap-4">
-            {[
-              ["icon-verif.png", "Beragam tipe unit tersedia sesuai kebutuhan"], //rev
-              ["icon-terbuka.png", "Bisa request unit sesuai preferensi"], //rev
-              ["icon-cod.png", "Tersedia sewa harian, mingguan, hingga bulanan"], //rev
-              // ["icon-data.png", "Data Pribadi Pelanggan Terjamin Aman"],
-            ].map(([icon, text], i) => (
-              <div
-                key={i}
-                className="bg-white text-black p-3 rounded shadow flex items-center gap-3 h-[90px] w-full max-w-full sm:max-w-[480px]"
-              >
-                <Image
-                  src={`/images/${icon}`}
-                  className="w-16 h-16 object-contain"
-                  alt="icon"
-                  width={100}
-                  height={100}
-                />
-                <p className="text-base font-semibold sm:text-lg leading-snug">
-                  {text}
-                </p>
-              </div>
-            ))}
-          </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {[
+        ["icon-syarat.png", "Syarat Sewa yang Ringan dan Tidak Ribet"],
+        ["icon-verif.png", "Beragam Tipe Unit Tersedia Sesuai Kebutuhan"],
+        ["icon-kualitas.png", "Privasi Pelanggan Terjamin Aman"],
+        ["icon-terbuka.png", "Bisa Request Unit Sesuai Preferensi"],
+        ["icon-pembayaran.png", "Sewa Mudah Tanpa Deposit"],
+        ["icon-cod.png", "Tersedia Sewa Harian, Mingguan, hingga Bulanan"],
+      ].map(([icon, text], i) => (
+        <div
+          key={i}
+          className="bg-white text-black p-3 rounded shadow flex items-center gap-3 h-[90px] w-full max-w-full sm:max-w-[480px]"
+        >
+          <Image
+            src={`/images/${icon}`}
+            className="w-16 h-16 object-contain"
+            alt="icon"
+            width={100}
+            height={100}
+          />
+          <p className="text-base font-semibold sm:text-lg leading-snug">
+            {text}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Komitmen & Showcase */}
       <section

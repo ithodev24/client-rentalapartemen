@@ -205,7 +205,7 @@ const Kontak = () => {
               <div className="text-center md:text-left">
                 <h2 className="text-3xl sm:text-4xl font-bold leading-tight">
                   Mari Kunjungi Sosial <br />
-                  Media Rentalday
+                  Media Perfect Room
                 </h2>
               </div>
               <div className="flex flex-col gap-4 w-full max-w-sm mx-auto md:mx-0">
