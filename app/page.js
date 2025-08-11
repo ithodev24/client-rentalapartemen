@@ -165,27 +165,23 @@ export default function HomePage() {
               Sewa Apartemen Bekasi
             </h3>
             <p className="text-sm sm:text-base leading-relaxed">
-              Sebagai bagian dari ekosistem layanan PT Dahlia Global Indo,
-              Pixelnesia hadir untuk menjawab kebutuhan masyarakat modern yang
-              menginginkan akses mudah terhadap perangkat teknologi tanpa harus
-              membeli. Pixelnesia menyediakan layanan rental Iphone yang
-              fleksibel, ekonomis, dan terpercaya, cocok untuk berbagai
-              kebutuhan pribadi maupun profesional.
+              Perfect Room hadir untuk memenuhi kebutuhan masyarakat modern yang
+              mencari hunian nyaman, strategis, dan siap huni tanpa ribet. Kami
+              menyediakan layanan sewa kamar apartemen di Bekasi dengan fasilitas
+              lengkap, lingkungan yang aman, serta harga yang kompetitif.
               <br />
               <br />
-              Melalui Pixelnesia, pelanggan dapat menikmati kemudahan dalam
-              menyewa Iphone, mulai dari proses pemesanan yang cepat, pilihan
-              perangkat terbaru yang terawat, hingga dukungan layanan pelanggan
-              yang sigap dan informatif. Komitmen PT Dahlia Global Indo dalam
-              menghadirkan layanan unggulan tercermin dalam setiap aspek
-              Pixelnesia, menjadikannya solusi cerdas untuk gaya hidup digital
-              masa kini.
+              Melalui Perfect Room, Anda dapat menikmati proses pemesanan yang
+              cepat, pilihan unit yang terawat, dan layanan pelanggan yang ramah
+              serta responsif. Komitmen kami adalah memberikan hunian yang tidak
+              hanya nyaman, tetapi juga mendukung gaya hidup praktis dan modern
+              bagi setiap pelanggan.
             </p>
           </div>
           <div className="flex-1">
             <Image
               src="/images/bgkolam.png"
-              alt="Produk Motor"
+              alt="Produk Apartemen"
               className="w-full max-w-sm mx-auto drop-shadow-xl"
               width={500}
               height={500}
@@ -240,7 +236,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/60 z-0" />
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <p className="text-lg sm:text-xl mb-4">
-            Kami berkomitmen untuk menyediakan unit motor terbaik bagi setiap
+            Kami berkomitmen untuk menyediakan unit apartemen terbaik bagi setiap
             penyewa, <br className="hidden sm:block" />
             karena kenyamanan, kepuasan, dan keamanan Anda adalah prioritas
             utama kami.

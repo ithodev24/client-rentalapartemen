@@ -91,7 +91,7 @@ const SosialMediaDropdown = () => {
         >
           <div className="px-4 pb-4 pt-2 text-black space-y-4 text-sm">
             {[
-              // { area: "Bekasi", users: [{ handle: "@rentaldaybandung", link: "https://www.tiktok.com/@rentaldaybandung" }, { handle: "@rentalday.student", link: "https://www.tiktok.com/@rentalday.student" }] },
+              
               {
                 area: "Bekasi",
                 users: [
@@ -101,8 +101,7 @@ const SosialMediaDropdown = () => {
                   },
                 ],
               },
-              // { area: "Purwokerto", users: [{ handle: "@rentalday.pwt", link: "https://www.tiktok.com/@rentalday.pwt" }] },
-              // { area: "Malang", users: [{ handle: "@rentaldaymlg", link: "https://www.tiktok.com/@rentaldaymlg" }] },
+              
             ].map((region, index) => (
               <div key={index}>
                 {index > 0 && <hr className="border-t border-gray-300 my-2" />}
@@ -156,13 +155,7 @@ const SosialMediaDropdown = () => {
         >
           <div className="px-4 pb-4 pt-2 text-black space-y-4 text-sm">
             {[
-              // { area: "Bandung", users: [
-              //   { handle: "@rentalday.student", link: "https://instagram.com/rentalday.student" },
-              //   { handle: "@rentalday.molis", link: "https://instagram.com/rentalday.molis" },
-              //   { handle: "@bandungrider.id", link: "https://instagram.com/bandungrider.id" }
-              // ]},
-              // { area: "Bali", users: [{ handle: "@balirider.id", link: "https://instagram.com/balirider.id" }] },
-              // { area: "Purwokerto", users: [{ handle: "@rentalday.pwt", link: "https://instagram.com/rentalday.pwt" }] },
+              
               {
                 area: "Bekasi",
                 users: [

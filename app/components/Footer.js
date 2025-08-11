@@ -62,7 +62,7 @@ export default function Footer() {
 
              {/* Instagram */}
             <Link
-              href="https://www.instagram.com/pixelnesia.id?utm_source=ig_web_button_share_sheet&igsh=MTFudWg1N2hhZGswbw=="
+              href="https://www.instagram.com/perfectrooms.id?utm_source=ig_web_button_share_sheet&igsh=MW5uNjhkZjZhc3Fhaw=="
               target="_blank"
               rel="noopener noreferrer"
             >
